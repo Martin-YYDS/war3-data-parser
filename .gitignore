@@ -1,0 +1,36 @@
+# 依赖和构建
+node_modules/
+dist/
+data/
+data_compressed/
+*.log
+.DS_Store
+
+# 源文件
+*.xlsx
+*.csv
+*.tgz
+
+# 但保留必要文件
+!src/*.ts
+!README.md
+!QUICKSTART.md
+!COMPRESS_MAPPING.md
+!PUBLISH_README.md
+!CHANGELOG.md
+!package.json
+!tsconfig.json
+!compress.js
+!gzip_compress.js
+!example-compressed.js
+!example.js
+!example.ts
+!publish.sh
+
+# 数据文件（保留压缩后的）
+!data_gzip/
+!data_gzip/*.gz
+!data_gzip/README.md
+
+# 配置文件
+!.gitignore

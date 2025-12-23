@@ -1,0 +1,62 @@
+{
+  "name": "war3-data-parser",
+  "version": "1.1.2",
+  "description": "War3英雄、单位、技能、物品等完整数据解析库，包含836个单位、799个技能、273个物品等数据，开箱即用。支持Gzip压缩，包体减少96%",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build && npm run compress",
+    "compress": "node compress.js && node gzip_compress.js",
+    "test": "node example-compressed.js",
+    "example": "node example-compressed.js",
+    "dev": "tsc --watch"
+  },
+  "keywords": [
+    "warcraft3",
+    "war3",
+    "warcraft",
+    "hero",
+    "unit",
+    "ability",
+    "item",
+    "data",
+    "parser",
+    "database",
+    "gamedata",
+    "compressed",
+    "gzip"
+  ],
+  "author": {
+    "name": "war3-data-parser",
+    "email": "war3-data-parser@example.com"
+  },
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0"
+  },
+  "files": [
+    "dist/",
+    "data_gzip/",
+    "README.md",
+    "QUICKSTART.md",
+    "COMPRESS_MAPPING.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/war3-data-parser/war3-data-parser.git"
+  },
+  "homepage": "https://github.com/war3-data-parser/war3-data-parser#readme",
+  "bugs": {
+    "url": "https://github.com/war3-data-parser/war3-data-parser/issues"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "publishConfig": {
+    "access": "public",
+    "tag": "latest"
+  }
+}
