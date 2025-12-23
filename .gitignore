@@ -1,7 +1,6 @@
 # 依赖和构建
 node_modules/
 dist/
-data/
 data_compressed/
 *.log
 .DS_Store
@@ -31,6 +30,10 @@ data_compressed/
 !data_gzip/
 !data_gzip/*.gz
 !data_gzip/README.md
+
+# 保留原始data目录
+!data/
+!data/*.json
 
 # 配置文件
 !.gitignore
